@@ -7,8 +7,10 @@
 	</head>
 	<body>
 		<div id="root">
-			<a :title="link1.title" :href="link1.url">{{link1.title}}</a>
+			<a :class="{'active':activelink=='link1'}" :title="link1.title" :href="link1.url">{{link1.title}}</a>
+			<div v-html="lol"></div>
 		</div>
+
 	</body>
 	<footer>
 		<script type="text/javascript" src="app.js"></script>
