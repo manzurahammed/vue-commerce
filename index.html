@@ -9,6 +9,11 @@
 		<div id="root">
 			<a :class="{'active':activelink=='link1'}" :title="link1.title" :href="link1.url">{{link1.title}}</a>
 			<div v-html="lol"></div>
+			<ul>
+				<li v-for="(l,i) in lo">
+					{{i}}{{l}}
+				</li>
+			</ul>
 		</div>
 
 	</body>
