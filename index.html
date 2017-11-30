@@ -10,10 +10,19 @@
 			<a :class="{'active':activelink=='link1'}" :title="link1.title" :href="link1.url">{{link1.title}}</a>
 			<div v-html="lol"></div>
 			<ul>
-				<li v-show="l.exp >2 " v-for="(l,i) in lo">
-					<p >{{i}}{{l.name}}</p>
+				<li  v-for="(l,i) in lo">
+					<p @click="remove(i)" >{{i}}{{l}}</p>
 				</li>
 			</ul>
+			<input type="text" v-model="newdata">
+			<button @click="add_data()">Add</button>
+
+			<ul>
+				<li  v-for="(p,i) in unpaid">
+					<p>{{i}}{{p.service}} {{p.amount}}</p>
+				</li>
+			</ul>
+			{{totalAmount}}
 		</div>
 
 	</body>
