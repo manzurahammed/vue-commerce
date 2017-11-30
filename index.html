@@ -19,7 +19,7 @@
 
 			<ul>
 				<li  v-for="(p,i) in unpaid">
-					<p>{{i}}{{p.service}} {{p.amount}}</p>
+					<p>{{i}}{{p.service | uper |lower}} {{p.amount}}</p>
 				</li>
 			</ul>
 			{{totalAmount}}

@@ -1,3 +1,7 @@
+Vue.filter('lower',function(s){
+	return s.toLowerCase();
+});
+
 var app = new Vue({
 	el:"#root",
 	data:{
@@ -34,6 +38,11 @@ var app = new Vue({
 				sum += this.payments[i].amount;
 			}
 			return sum;
+		}
+	},
+	filters : {
+		uper:function(s){
+			return s.toUpperCase();
 		}
 	}
 });
