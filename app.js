@@ -2,6 +2,14 @@ Vue.filter('lower',function(s){
 	return s.toLowerCase();
 });
 
+Vue.component('panel',{
+	template:`<div>
+	{{title}}
+	{{content}}
+	</div>`,
+	props:['title','content']
+});
+
 var app = new Vue({
 	el:"#root",
 	data:{
